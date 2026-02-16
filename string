@@ -1,0 +1,11 @@
+s1="python"
+s2="programming"
+print ("string 1 is :",s1)
+print ("string 2 is :",s2)
+print (" concatnation :",s1+s2)
+print ("conatnation :",s1+""+s2)
+print ("length of string 1 is:",len(s1))
+print ("length of string 2 is:",len(s2))
+print ("first character of string 1:",s1[0])
+print ("last character of string 1:",s1[-1])
+print ("sub string of s1:",s1[0:3])
