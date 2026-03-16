@@ -1,0 +1,95 @@
+class Student:
+    def __init__(self, name, gender, dob, age, blood_group, address, mobile, email, linkedin,
+                 father_name, father_occ, father_mobile, mother_name, mother_occ, mother_mobile,
+                 mark10, mark12, college, department, reg_no, year, semester, cgpa, projects, internship, sports):
+
+        self.name = name
+        self.gender = gender
+        self.dob = dob
+        self.age = age
+        self.blood_group = blood_group
+        self.address = address
+        self.mobile = mobile
+        self.email = email
+        self.linkedin = linkedin
+        self.father_name = father_name
+        self.father_occ = father_occ
+        self.father_mobile = father_mobile
+        self.mother_name = mother_name
+        self.mother_occ = mother_occ
+        self.mother_mobile = mother_mobile
+        self.mark10 = mark10
+        self.mark12 = mark12
+        self.college = college
+        self.department = department
+        self.reg_no = reg_no
+        self.year = year
+        self.semester = semester
+        self.cgpa = cgpa
+        self.projects = projects
+        self.internship = internship
+        self.sports = sports
+
+    def display(self):
+        print("\n---- Student Details ----")
+        print("Name:", self.name)
+        print("Gender:", self.gender)
+        print("Date of Birth:", self.dob)
+        print("Age:", self.age)
+        print("Blood Group:", self.blood_group)
+        print("Address:", self.address)
+        print("Mobile:", self.mobile)
+        print("Email:", self.email)
+        print("LinkedIn:", self.linkedin)
+        print("Father Name:", self.father_name)
+        print("Father Occupation:", self.father_occ)
+        print("Father Mobile:", self.father_mobile)
+        print("Mother Name:", self.mother_name)
+        print("Mother Occupation:", self.mother_occ)
+        print("Mother Mobile:", self.mother_mobile)
+        print("10th Mark:", self.mark10)
+        print("12th Mark:", self.mark12)
+        print("College:", self.college)
+        print("Department:", self.department)
+        print("Register No:", self.reg_no)
+        print("Year:", self.year)
+        print("Semester:", self.semester)
+        print("CGPA:", self.cgpa)
+        print("Projects:", self.projects)
+        print("Internship:", self.internship)
+        print("Sports Achievements:", self.sports)
+
+
+# Input from user
+name = input("Student Name: ")
+gender = input("Gender: ")
+dob = input("Date of Birth: ")
+age = input("Age: ")
+blood_group = input("Blood Group: ")
+address = input("Address: ")
+mobile = input("Mobile No: ")
+email = input("Email ID: ")
+linkedin = input("LinkedIn ID: ")
+father_name = input("Father Name: ")
+father_occ = input("Father Occupation: ")
+father_mobile = input("Father Mobile No: ")
+mother_name = input("Mother Name: ")
+mother_occ = input("Mother Occupation: ")
+mother_mobile = input("Mother Mobile No: ")
+mark10 = input("10th Mark: ")
+mark12 = input("12th Mark: ")
+college = input("College Name: ")
+department = input("Department: ")
+reg_no = input("Register No: ")
+year = input("Year: ")
+semester = input("Semester: ")
+cgpa = input("CGPA: ")
+projects = input("Projects Done: ")
+internship = input("Internship: ")
+sports = input("Sports Achievements: ")
+
+s1 = Student(name, gender, dob, age, blood_group, address, mobile, email, linkedin,
+             father_name, father_occ, father_mobile, mother_name, mother_occ, mother_mobile,
+             mark10, mark12, college, department, reg_no, year, semester, cgpa, projects, internship, sports)
+
+s1.display()
