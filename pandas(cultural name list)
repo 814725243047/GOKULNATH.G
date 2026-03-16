@@ -1,0 +1,15 @@
+import pandas as pd
+
+data = {
+    "name": ["gokulnath", "goutam", "akhil", "harish", "dinesh"],
+    "reg no": [47, 50, 10, 60, 41],
+    "year": ["1", "2", "3", "4", "1"],
+    "department": ["aids", "it", "mech", "cse", "eee"],
+    "sec": ["a", "c", "c", "b", "a"],
+    "events": ["singing", "dancing", "music", "silambam", "drama"]
+}
+
+df = pd.DataFrame(data)
+
+print("Cultural Name List")
+print(df)
