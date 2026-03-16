@@ -1,0 +1,8 @@
+import math
+
+number = int(input("Enter a number: "))
+base = int(input("Enter base value: "))
+power = int(input("Enter power value: "))
+
+print("Square root:", math.sqrt(number))
+print("Power:", math.pow(base, power))
