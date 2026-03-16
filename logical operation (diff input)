@@ -1,0 +1,27 @@
+a=int(input("enter the first value for addtion "))
+b=int(input("enter the second value for addtion"))
+c=int(input("enter the first value for subraction "))
+d=int(input("enter the second value for subraction"))
+e=int(input("enter the first value for multiplication"))
+f=int(input("enter the second value for multiplication"))
+g=int(input("enter the first value for division "))
+h=int(input("enter the second value for division"))
+def add (a,b):
+    return(a+b)
+result = add (a,b)
+print ("sum of two number",result)
+
+def sub(c,d):
+    return(c-d)
+result= sub(c,d)
+print("sub of two number",result)
+
+def multi(e,f):
+    return(e*f)
+result= multi(e,f)
+print("multi of two number",result)
+
+def div(g,h):
+    return(g/h)
+result= div(g,h)
+print("division of two number",result)
