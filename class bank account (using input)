@@ -1,0 +1,19 @@
+class BankAccount:
+    def __init__(self, withdraw, deposit, balance):
+        self.deposit = deposit
+        self.withdraw = withdraw
+        self.balance = balance
+
+    def display(self):
+        print("Deposit =", self.deposit)
+        print("Withdraw =", self.withdraw)
+        print("Balance =", self.balance)
+
+
+# input from user
+deposit = int(input("Enter deposit amount: "))
+withdraw = int(input("Enter withdraw amount: "))
+balance = int(input("Enter balance amount: "))
+
+b1 = BankAccount(withdraw, deposit, balance)
+b1.display()
