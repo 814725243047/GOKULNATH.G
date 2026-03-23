@@ -1,0 +1,15 @@
+import pandas as pd
+
+data = {"marks": [45, 50, 52, 49, 100]}
+df = pd.DataFrame(data)
+
+mean = df["marks"].mean()
+std = df["marks"].std()
+
+outliers = df[df["marks"] > mean + 2 * std]
+
+print("data set")
+print(df)
+
+print("outliers")
+print(outliers)
