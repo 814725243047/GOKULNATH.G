@@ -1,0 +1,34 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Take input for age
+age_input = input("Enter ages separated by space: ")
+age = list(map(int, age_input.split()))
+
+# Take input for salary
+salary_input = input("Enter salaries separated by space: ")
+salary = list(map(int, salary_input.split()))
+
+# Create dataset
+data = {
+    "age": age,
+    "salary": salary
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Describe data
+print("\nData Summary:")
+print(df.describe())
+
+# Scatter plot
+plt.scatter(df["age"], df["salary"])
+
+# Labels and title
+plt.xlabel("Age")
+plt.ylabel("Salary")
+plt.title("Age vs Salary")
+
+# Show plot
+plt.show()
