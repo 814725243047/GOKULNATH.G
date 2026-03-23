@@ -1,0 +1,37 @@
+from sklearn.tree import DecisionTreeClassifier
+import pandas as pd
+
+# Take input for hours
+hours_input = input("Enter study hours separated by space: ")
+hours = list(map(int, hours_input.split()))
+
+# Take input for pass/fail (0 or 1)
+pass_input = input("Enter pass values (0 or 1) separated by space: ")
+pass_values = list(map(int, pass_input.split()))
+
+# Create dataset
+data = {
+    "hours": hours,
+    "pass": pass_values
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Split features and target
+X = df[["hours"]]
+y = df["pass"]
+
+# Create model
+model = DecisionTreeClassifier()
+
+# Train model
+model.fit(X, y)
+
+# Take input for prediction
+test_hour = int(input("Enter hours to predict pass/fail: "))
+
+# Predict
+prediction = model.predict([[test_hour]])
+
+print("\nPrediction:", prediction)
