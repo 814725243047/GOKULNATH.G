@@ -1,0 +1,36 @@
+import pandas as pd
+
+# Take input from user
+marks_input = input("Enter marks separated by space: ")
+
+# Convert input string to list of integers
+marks_list = list(map(int, marks_input.split()))
+
+# Create DataFrame
+df = pd.DataFrame({"marks": marks_list})
+
+# Calculate Q1, Q3, and IQR
+Q1 = df["marks"].quantile(0.25)
+Q3 = df["marks"].quantile(0.75)
+IQR = Q3 - Q1
+
+# Calculate bounds
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+# Detect outliers
+outliers = df[(df["marks"] < lower_bound) | (df["marks"] > upper_bound)]
+
+# Output
+print("\nData set:")
+print(df)
+
+print("\nQ1:", Q1)
+print("Q3:", Q3)
+print("IQR:", IQR)
+
+print("\nLower Bound:", lower_bound)
+print("Upper Bound:", upper_bound)
+
+print("\nOutliers:")
+print(outliers)
