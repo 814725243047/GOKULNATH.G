@@ -1,0 +1,13 @@
+# Taking input from user
+s1 = input("Enter the first string: ")
+s2 = input("Enter the second string: ")
+
+print("String 1 is:", s1)
+print("String 2 is:", s2)
+print("Concatenation:", s1 + s2)
+print("Concatenation with space:", s1 + " " + s2)
+print("Length of string 1 is:", len(s1))
+print("Length of string 2 is:", len(s2))
+print("First character of string 1:", s1[0])
+print("Last character of string 1:", s1[-1])
+print("Substring of string 1 (first 3 characters):", s1[0:3])
