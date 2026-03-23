@@ -1,0 +1,5 @@
+# Take input from the user
+message = input("Enter a message: ")
+
+# Print the message
+print(message)
