@@ -1,0 +1,26 @@
+from sklearn.tree import DecisionTreeClassifier
+import pandas as pd
+
+# Create dataset
+data = {
+    "hours": [1, 2, 3, 4, 5],
+    "pass": [0, 0, 1, 1, 1]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Split features and target
+X = df[["hours"]]
+y = df["pass"]
+
+# Create model
+model = DecisionTreeClassifier()
+
+# Train model
+model.fit(X, y)
+
+# Predict
+prediction = model.predict([[3]])
+
+print("Prediction:", prediction)
