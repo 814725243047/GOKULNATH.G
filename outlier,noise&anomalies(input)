@@ -1,0 +1,27 @@
+import pandas as pd
+
+# Take input from user
+marks_input = input("Enter marks separated by space: ")
+
+# Convert input string to list of integers
+marks_list = list(map(int, marks_input.split()))
+
+# Create DataFrame
+df = pd.DataFrame({"marks": marks_list})
+
+# Calculate mean and standard deviation
+mean = df["marks"].mean()
+std = df["marks"].std()
+
+# Detect outliers
+outliers = df[df["marks"] > mean + 2 * std]
+
+# Output
+print("\nData set:")
+print(df)
+
+print("\nMean:", mean)
+print("Standard Deviation:", std)
+
+print("\nOutliers:")
+print(outliers)
